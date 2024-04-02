@@ -7,10 +7,10 @@ public class Main {
     public static void main(String[] args) {
 
         String path;
-        //Scanner sc = new Scanner(System.in);
+
 
         System.out.println("Buscar ruta :");
-        path = args[0]; //sc.nextLine();
+        path = args[0];
         searchPath(path);
     }
     public static void searchPath(String path) {

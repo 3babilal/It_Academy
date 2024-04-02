@@ -11,6 +11,30 @@ public class NoGenericMethods {
         this.Carlemany = Carlemany;
     }
 
+    public Bulding getRitzz() {
+        return Ritzz;
+    }
+
+    public void setRitzz(Bulding ritzz) {
+        Ritzz = ritzz;
+    }
+
+    public Bulding getVela() {
+        return Vela;
+    }
+
+    public void setVela(Bulding vela) {
+        Vela = vela;
+    }
+
+    public Bulding getCarlemany() {
+        return Carlemany;
+    }
+
+    public void setCarlemany(Bulding carlemany) {
+        Carlemany = carlemany;
+    }
+
     @Override
     public String toString() {
         return "NoGenericMethods{" +
