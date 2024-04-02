@@ -1,8 +1,10 @@
 package Sprint1.Tasca3.Nivel2.Ejercicio2;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 
-public class Restaurant {
+public class Restaurant implements Comparable<Restaurant>{
     private String nom;
     private int puntuacion;
     public Restaurant(String nom, int puntuacion) {
@@ -43,6 +45,17 @@ public class Restaurant {
                 nom + '\'' +
                 ", puntuacion " + puntuacion +
                 '\n';
+    }
+
+    @Override
+    public int compareTo(Restaurant restaurant) {
+        int compareByName = this.getNom().compareTo(restaurant.getNom());
+        int compareByScore = restaurant.getPuntuacion() - this.getPuntuacion();
+        if(compareByName != 0){
+            return compareByName;
+        }else {
+            return compareByScore;
+        }
     }
 }
 
