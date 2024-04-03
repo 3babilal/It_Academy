@@ -26,7 +26,6 @@ public class Menu {
         Month agosto = new Month("Agosto");
         mesos.add(7, agosto);
         for(int i = 0; i<mesos.size(); i++) {
-
             System.out.println(mesos.get(i).getName());
         }
 
