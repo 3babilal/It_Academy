@@ -43,9 +43,10 @@ public class Menu {
             }
 
         } catch (FileNotFoundException e) {
-
+            //revisar esto esta mal
             e.printStackTrace();
         } catch (IOException e) {
+            //reviar esto esta mal
             e.printStackTrace();
         }
         try {
@@ -53,7 +54,7 @@ public class Menu {
             f.write(name + ", Score = " + score + "\n");
             f.close();
         }catch (Exception e) {
-
+            //esto esta vacio revisar porque tengo el catch vacio
         }
 
     }

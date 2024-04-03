@@ -13,5 +13,7 @@ public class Main {
                .map(String::valueOf)
                .sorted(Comparator.comparing(String::length))
                .forEach(System.out::println);
+
     }
+
 }
