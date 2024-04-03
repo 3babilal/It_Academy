@@ -1,4 +1,4 @@
-//package Sprint1.Tasca5.Nivel1.Ejercicio1;
+package Sprint1.Tasca5.Nivel1.Ejercicio1;//package Sprint1.Tasca5.Nivel1.Ejercicio1;
 
 import java.io.File;
 import java.util.Scanner;
@@ -7,9 +7,9 @@ public class Main {
     public static void main(String[] args) {
 
         String path;
-
+        Scanner sc = new Scanner(System.in);
         System.out.println("Buscar ruta :");
-        path = args[0];
+        path = sc.nextLine();
         searchPath(path);
     }
     public static void searchPath(String path) {
