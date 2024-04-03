@@ -1,20 +1,20 @@
 package Sprint1.Tasca1.Nivel2.Ejercicio1;
 
 public class Telefon {
-    private String marca;
+    private String brand;
     private String model;
 
-    public Telefon(String marca, String model) {
-        this.marca = marca;
+    public Telefon(String brand, String model) {
+        this.brand = brand;
         this.model = model;
     }
 
-    public String getMarca() {
-        return marca;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public String getModel() {
@@ -32,7 +32,7 @@ public class Telefon {
     @Override
     public String toString() {
         return "Telefon{" +
-                "marca='" + marca + '\'' +
+                "marca='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 '}';
     }

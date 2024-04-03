@@ -5,27 +5,27 @@ import java.util.List;
 import java.util.Objects;
 
 public class Restaurant implements Comparable<Restaurant>{
-    private String nom;
-    private int puntuacion;
-    public Restaurant(String nom, int puntuacion) {
-        this.nom = nom;
-        this.puntuacion = puntuacion;
+    private String name;
+    private int score;
+    public Restaurant(String name, int score) {
+        this.name = name;
+        this.score = score;
     }
 
-    public String getNom() {
-        return nom;
+    public String getName() {
+        return name;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getPuntuacion() {
-        return puntuacion;
+    public int getScore() {
+        return score;
     }
 
-    public void setPuntuacion(int puntuacion) {
-        this.puntuacion = puntuacion;
+    public void setScore(int score) {
+        this.score = score;
     }
 
     @Override
@@ -33,24 +33,24 @@ public class Restaurant implements Comparable<Restaurant>{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Restaurant that = (Restaurant) o;
-        return puntuacion == that.puntuacion && Objects.equals(nom, that.nom);
+        return score == that.score && Objects.equals(name, that.name);
     }
     @Override
     public int hashCode() {
-        return Objects.hash(nom, puntuacion);
+        return Objects.hash(name, score);
     }
     @Override
     public String toString() {
         return "Restaurant " +
-                nom + '\'' +
-                ", puntuacion " + puntuacion +
+                name + '\'' +
+                ", puntuacion " + score +
                 '\n';
     }
 
     @Override
     public int compareTo(Restaurant restaurant) {
-        int compareByName = this.getNom().compareTo(restaurant.getNom());
-        int compareByScore = restaurant.getPuntuacion() - this.getPuntuacion();
+        int compareByName = this.getName().compareTo(restaurant.getName());
+        int compareByScore = restaurant.getScore() - this.getScore();
         if(compareByName != 0){
             return compareByName;
         }else {

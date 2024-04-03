@@ -1,28 +1,27 @@
 package Sprint1.Tasca2.Nivel1.Ejercicio1;
 
 public class Producte {
-    private String nom;
-    private int preu;
-    public Producte(String nom, int preu) {
-        //super();
-        this.nom = nom;
-        this.preu = preu;
+    private String name;
+    private int price;
+    public Producte(String name, int price) {
+        this.name = name;
+        this.price = price;
     }
-    public String getNom() {
-        return nom;
+    public String getName() {
+        return name;
     }
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setName(String name) {
+        this.name = name;
     }
-    public int getPreu() {
-        return preu;
+    public int getPrice() {
+        return price;
     }
-    public void setPreu(int preu) {
-        this.preu = preu;
+    public void setPrice(int price) {
+        this.price = price;
     }
     @Override
     public String toString() {
-        return "Producte [nom=" + nom + ", preu=" + preu + "]";
+        return "Producte [nom=" + name + ", preu=" + price + "]";
     }
 
 

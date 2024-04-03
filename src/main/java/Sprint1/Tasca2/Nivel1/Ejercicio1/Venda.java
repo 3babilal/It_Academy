@@ -4,52 +4,52 @@ import java.util.ArrayList;
 
 public class Venda {
 
-    private int preuTotalVenda;
-    private ArrayList<Producte> productes = new ArrayList<Producte>();
+    private int totalPrice;
+    private ArrayList<Producte> products = new ArrayList<Producte>();
 
     public Venda() {
 
     }
 
-    public void afegirProducte(Producte producto) {
-        productes.add(producto);
+    public void addProduct(Producte product) {
+        products.add(product);
     }
 
-    public int getPreuTotalVenda() {
-        return preuTotalVenda;
+    public int getTotalPrice() {
+        return totalPrice;
     }
 
-    public void setPreuTotalVenda(int preuTotalVenda) {
-        this.preuTotalVenda = preuTotalVenda;
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
-    public int calcularTotal()throws VendaBuidaException {
+    public int calculatorTotal()throws VendaBuidaException {
         try {
-            if (productes.size() == 0) {
+            if (products.isEmpty()) {
                 throw new VendaBuidaException("Per fer una venda primer has d'afegir productes!");
             }
-            for (Producte producte : productes) {
-                preuTotalVenda += producte.getPreu();
+            for (Producte producte : products) {
+                totalPrice += producte.getPrice();
             }
 
             Producte[] error = new Producte[1];
-            error[5] = new Producte(null, preuTotalVenda);
+            error[5] = new Producte(null, totalPrice);
 
 
         } catch (VendaBuidaException e) {
-            String mensaje = e.getMensaje();
+            String mensaje = e.getMessage();
             System.out.println(mensaje);
 
         } catch (ArrayIndexOutOfBoundsException g) {
             System.out.println("Excepcion Out Of Bounds " + g.getMessage());
         }
 
-        return preuTotalVenda;
+        return totalPrice;
     }
 
     @Override
     public String toString() {
-        return "Preu total venda=" + preuTotalVenda + ", productes=" + productes + "]";
+        return "Preu total venda=" + totalPrice + ", productes=" + products + "]";
     }
 
 }

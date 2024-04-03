@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 public class LaunchEceptionTest {
     @Test
-    @DisplayName("Must launch an ArrayIndexOutOfBoundsException")
+    @DisplayName("Debe lanzar un ArrayIndexOutOfBoundsException")
 
     public void launchException(){
         Assertions.assertThrows(ArrayIndexOutOfBoundsException.class,()-> LaunchException.launchException());

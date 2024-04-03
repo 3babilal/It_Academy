@@ -11,20 +11,15 @@ public class Menu {
         Producte quinto = new Producte("Producto5", 90);
         Producte sexto = new Producte("Producto6", 100);
 
-
-
         Venda vip = new Venda();
 
         Venda buida = new Venda();
-        vip.afegirProducte(segundo);
-        vip.afegirProducte(sexto);
-        vip.afegirProducte(tercero);
+        vip.addProduct(segundo);
+        vip.addProduct(sexto);
+        vip.addProduct(tercero);
 
-
-
-        System.out.println(vip.calcularTotal());
-
-        System.out.println(buida.calcularTotal());
+        System.out.println(vip.calculatorTotal());
+        System.out.println(buida.calculatorTotal());
 
     }
 

@@ -80,6 +80,7 @@ public class Entrada {
         String readString;
         do{
             System.out.println(message);
+            sc.nextLine();
             try {
                 readString = sc.nextLine();
                 break;

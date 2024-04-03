@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         //imprimir ordenado, primero los que empiezan por e(despues los otros),cambiar todas las a por un 4,mostrart solo los numericos
 
-        List<String> list = Arrays.asList("Hola","Mundo","Hoy","A","fecha","z","Lunes","1","del","09","del","2024","Hace","Muy","Buen","Tiempo",".","Estoy","en", "el","Trabajo");
+        List<String> list = Arrays.asList("Hola","Mundo","Hoy","a","fecha","z","Lunes","1","del","09","del","2024","Hace","Muy","Buen","Tiempo",".","Estoy","en", "el","Trabajo");
 
         System.out.println("ordenado");
         System.out.println(list.stream()
@@ -29,7 +29,6 @@ public class Main {
 
         System.out.println("\n change 4");
         list.stream()
-                .sorted()
                 .map(data -> data.replace('a','4'))
                 .forEach(System.out::println);
 

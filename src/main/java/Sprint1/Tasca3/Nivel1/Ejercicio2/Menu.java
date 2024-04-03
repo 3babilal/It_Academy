@@ -16,16 +16,16 @@ public class Menu {
 
         System.out.println(list);
 
-        List<Integer> listInversa = new ArrayList<>();
+        List<Integer> listReverse = new ArrayList<>();
 
         ListIterator<Integer> listIteator = list.listIterator(list.size());
         while(listIteator.hasPrevious()) {
 
-            int numeroInverso = listIteator.previous();
-            listInversa.add(numeroInverso);
+            int numberReverse = listIteator.previous();
+            listReverse.add(numberReverse);
         }
 
-        System.out.println(listInversa);
+        System.out.println(listReverse);
     }
 
 }

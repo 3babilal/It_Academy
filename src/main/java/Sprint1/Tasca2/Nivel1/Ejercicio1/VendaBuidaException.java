@@ -1,14 +1,14 @@
 package Sprint1.Tasca2.Nivel1.Ejercicio1;
 
 class VendaBuidaException extends Exception{
-    private String mensaje;
+    private String message;
 
-    public VendaBuidaException(String mensaje) {
-        this.mensaje = mensaje;
+    public VendaBuidaException(String message) {
+        this.message = message;
     }
 
-    public String getMensaje() {
-        return mensaje;
+    public String getMessage() {
+        return message;
     }
 
 

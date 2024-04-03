@@ -4,11 +4,11 @@ import Sprint1.Tasca1.Nivel1.Ejercicio1.Instrument;
 
 public class Percussio extends Instrument {
 
-    public Percussio(String nom, int preu) {
-        super(nom, preu);
+    public Percussio(String name, int price) {
+        super(name, price);
     }
     @Override
-    public void tocar() {
+    public void play() {
         System.out.println("Està sonant un instrument de percussió");
     }
 

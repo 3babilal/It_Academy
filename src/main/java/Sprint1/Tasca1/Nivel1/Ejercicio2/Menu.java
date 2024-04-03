@@ -15,8 +15,8 @@ public class Menu {
         System.out.println(ferrari);
         System.out.println(bmw);
         System.out.println("El metodo statico nos permite ");
-        Cotxe.frenar();
-        ferrari.accelerar();
+        Cotxe.stop();
+        ferrari.accelerate();
     }
 
 }

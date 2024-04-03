@@ -6,7 +6,7 @@ public class Menu {
         System.out.println(movil.call("96511151"));
 
         Smartphone iphone = new Smartphone("Iphone", "14");
-        iphone.alarma();
-        iphone.fotografiar();
+        iphone.alarm();
+        iphone.photograph();
     }
 }
