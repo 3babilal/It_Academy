@@ -6,21 +6,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        String path;
         Scanner sc = new Scanner(System.in);
         System.out.println("Buscar ruta :");
-        path = sc.nextLine();
+        File path = new File(sc.nextLine());
         searchPath(path);
     }
-    public static void searchPath(String path) {
+    public static void searchPath(File path) {
 
-        File pack = new File(path);
-
-        if (pack.exists() && pack.isDirectory()) {
-            File[] allFiles = pack.listFiles();
-            assert allFiles != null;
-            for (File file : allFiles) {
-                System.out.println(file.getName());
+        if (path.isDirectory()) {
+            File[] allFiles = path.listFiles();
+            if(allFiles != null) {
+                for (File file : allFiles) {
+                    System.out.println(file.getName());
+                }
             }
         } else {
             System.out.println("No trobat");

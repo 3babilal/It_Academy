@@ -8,27 +8,28 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        String path;
         Scanner sc = new Scanner(System.in);
-
         System.out.println("Buscar ruta :");
-        path = sc.nextLine();
+        File path = new File(sc.nextLine());
         searchPath(path);
     }
-    public static void searchPath(String path) {
+    public static void searchPath(File path) {
 
-        File pack = new File(path);
-        File[] allFiles = pack.listFiles();
-        SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
-        Arrays.sort(allFiles);
-        for(int i = 0; i< allFiles.length; i++){
-            if(allFiles[i].isDirectory()){
-                System.out.println(String.format(String.format("D: " + allFiles[i].getName() + " última data de modificació " + date.format(allFiles[i].lastModified()))));
-                String absPath = allFiles[i].getAbsolutePath();
-                searchPath(absPath);
-            }else{
-                System.out.println("F: " + allFiles[i].getName()+ " última data de modificació " + date.format(allFiles[i].lastModified()));
+        if(path.exists()) {
+            File[] allFiles = path.listFiles();
+            SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
+            Arrays.sort(allFiles);
+            for (int i = 0; i < allFiles.length; i++) {
+                if (allFiles[i].isDirectory()) {
+                    System.out.printf((String.format("Folder: " + allFiles[i].getName() + " última data de modificació " + date.format(allFiles[i].lastModified()))) + "%n");
+                    File absPath = new File(allFiles[i].getAbsolutePath());
+                    searchPath(absPath);
+                } else {
+                    System.out.println("File: " + allFiles[i].getName() + " última data de modificació " + date.format(allFiles[i].lastModified()));
+                }
             }
+        }else {
+            System.out.println("No existeix la ruta");
         }
     }
 }
