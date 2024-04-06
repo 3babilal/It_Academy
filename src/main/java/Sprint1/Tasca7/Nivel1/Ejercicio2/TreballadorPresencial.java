@@ -11,6 +11,10 @@ public class TreballadorPresencial extends Treballador {
         super(name, lastname, priceHour);
     }
     @Deprecated
+    public void methodObsolet(){
+        System.out.println("Methodo obsoleto");
+    }
+
     public void sickLeave() {
         System.out.println("Estas de baja por enfermedad");
     }

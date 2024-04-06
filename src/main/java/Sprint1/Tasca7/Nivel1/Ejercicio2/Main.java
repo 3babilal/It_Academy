@@ -7,10 +7,8 @@ public class Main {
 
         TreballadorOnline bilal = new TreballadorOnline("Bilal","layache",11);
         TreballadorPresencial pepito = new TreballadorPresencial("Pepito", "Fernandez",14);
-        bilal.calculateSalary(8);
-        pepito.calculateSalary(12);
-        bilal.holidays();
-        pepito.sickLeave();
+        bilal.methodDeprecated();
+        pepito.methodObsolet();
 
 
     }

@@ -9,6 +9,9 @@ public class TreballadorOnline extends Treballador {
         super(name, lastname, priceHour);
     }
     @Deprecated
+    public void methodDeprecated(){
+        System.out.println("Methodo obsoleto");
+    }
     public void holidays() {
         System.out.println("Estas de Vacaciones");
     }

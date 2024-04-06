@@ -11,6 +11,6 @@ public class Main {
         list.add("String");
 
         IndefiniteVariableMethod.generic(list);
-        
+
     }
 }
