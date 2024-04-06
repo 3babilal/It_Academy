@@ -7,18 +7,18 @@ import org.junit.jupiter.api.Test;
 
 public class MonthTest {
     @Test
-    @DisplayName("Deberia tener 12 meses")
+    @DisplayName("Debe tener 12 objetos")
     void  monthsSize(){
         Assertions.assertEquals(12, Month.getMonths().size());
     }
     @Test
-    @DisplayName("Comprueba que no es nulo")
+    @DisplayName("Comprueba que tenemos valores")
     void notNull(){
         Assertions.assertNotEquals(null,Month.getMonths());
         Assertions.assertNotNull(Month.getMonths());
     }
     @Test
-    @DisplayName("Mes 8 agosto")
+    @DisplayName("Comprueba que el 8 més es Agosto")
     void monthAugust(){
         Assertions.assertEquals("Agosto",Month.getMonths().get(7));
     }
