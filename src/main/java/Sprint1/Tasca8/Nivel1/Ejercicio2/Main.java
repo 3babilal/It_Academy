@@ -8,7 +8,7 @@ public class Main {
         List<String> names = Arrays.asList("UNO", "DOS", "TRES", "CUATRO", "VEINTI-CINCO");
 
         List<String> charO = names.stream().filter(s->s.contains("O") && s.length()>5).toList();
-        charO.forEach((containsO)-> System.out.println(containsO));
+        charO.forEach(System.out::println);
 
     }
 }

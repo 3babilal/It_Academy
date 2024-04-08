@@ -9,7 +9,7 @@ public class Main {
         List<String> names = Arrays.asList("UNO", "DOS", "TRES", "CUATRO");
 
         List<String> charO = names.stream().filter(s->s.contains("O")).toList();
-        charO.forEach((containsO)-> System.out.println(containsO));
+        charO.forEach(System.out::println);
 
     }
 }
