@@ -1,26 +1,24 @@
 package Sprint1.Tasca2.Nivel1.Ejercicio1;
 
 public class Menu {
-    public static void main(String[] args) throws VendaBuidaException    {
-        Producte primero = new Producte("Producto1", 50);
-        Producte segundo = new Producte("Producto2", 60);
+    public static void main(String[] args) {
 
-        Producte tercero = new Producte("Producto3", 70);
-        Producte quarto = new Producte("Producto4", 80);
+        try {
+            Producte[] empty = new Producte[0];
+            Venda empty_sell = new Venda(empty);
 
-        Producte quinto = new Producte("Producto5", 90);
-        Producte sexto = new Producte("Producto6", 100);
-
-        Venda vip = new Venda();
-
-        Venda buida = new Venda();
-        vip.addProduct(segundo);
-        vip.addProduct(sexto);
-        vip.addProduct(tercero);
-
-        System.out.println(vip.calculatorTotal());
-        System.out.println(buida.calculatorTotal());
-
+            System.out.println(empty_sell.calculatorTotal());
+        }catch (VendaBuidaException e){
+            System.out.println("Error " + e.getMessage());
+        }
+        try {
+            Producte[] products = new Producte[1];
+            products[0] = new Producte("Producto",25);
+            Venda sell = new Venda(products);
+            Producte arrayBoundException = products[99];
+        }catch (ArrayIndexOutOfBoundsException | VendaBuidaException e){
+            System.out.println("Error " + e.getMessage());
+        }
     }
 
 }

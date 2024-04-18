@@ -5,45 +5,19 @@ import java.util.ArrayList;
 public class Venda {
 
     private int totalPrice;
-    private ArrayList<Producte> products = new ArrayList<Producte>();
+    private final Producte[] products;
 
-    public Venda() {
-
+    public Venda(Producte[] products) throws VendaBuidaException {
+        if(products.length==0){
+            throw new VendaBuidaException("No haz añadido productos");
+        }
+        this.products = products;
     }
+    public int calculatorTotal(){
 
-    public void addProduct(Producte product) {
-        products.add(product);
-    }
-
-    public int getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(int totalPrice) {
-        this.totalPrice = totalPrice;
-    }
-
-    public int calculatorTotal()throws VendaBuidaException {
-        try {
-            if (products.isEmpty()) {
-                throw new VendaBuidaException("Per fer una venda primer has d'afegir productes!");
-            }
             for (Producte producte : products) {
                 totalPrice += producte.getPrice();
             }
-
-            Producte[] error = new Producte[1];
-            error[5] = new Producte(null, totalPrice);
-
-
-        } catch (VendaBuidaException e) {
-            String mensaje = e.getMessage();
-            System.out.println(mensaje);
-
-        } catch (ArrayIndexOutOfBoundsException g) {
-            System.out.println("Excepcion Out Of Bounds " + g.getMessage());
-        }
-
         return totalPrice;
     }
 

@@ -1,0 +1,9 @@
+TASCA 1
+NIVEL 1
+EX 1: 
+super() eliminado
+EX 2:
+comentarios eliminados
+variable estatica inicializada en la declaracion
+
+
