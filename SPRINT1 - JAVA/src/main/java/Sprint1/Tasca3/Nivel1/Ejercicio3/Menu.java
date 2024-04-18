@@ -43,18 +43,16 @@ public class Menu {
             }
 
         } catch (FileNotFoundException e) {
-            //revisar esto esta mal
-            e.printStackTrace();
+            System.out.println("Error" + e);
         } catch (IOException e) {
-            //reviar esto esta mal
-            e.printStackTrace();
+            System.out.println("Error "+ e);
         }
         try {
             FileWriter f = new FileWriter(System.getProperty("user.dir")+"/classificacio.txt",true);
             f.write(name + ", Score = " + score + "\n");
             f.close();
         }catch (Exception e) {
-            //esto esta vacio revisar porque tengo el catch vacio
+            System.out.println("Error" + e);
         }
 
     }
