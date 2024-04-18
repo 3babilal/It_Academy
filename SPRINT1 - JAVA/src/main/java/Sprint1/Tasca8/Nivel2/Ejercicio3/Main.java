@@ -14,8 +14,3 @@ public class Main {
 
     }
 }
-Create table cliente (
-        id INTEGER primary key auto_increment,
-        ClienteReferencia Integer,
-        Foreign key (ClienteReferencia) REFERENCES cliente(id);
-);

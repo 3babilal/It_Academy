@@ -7,7 +7,7 @@ USE optica;
 -- Table Address
 -- -----------------------------------------------------
 CREATE TABLE address (
-  id_adrress INT PRIMARY KEY AUTO_INCREMENT,
+  id_address INT PRIMARY KEY AUTO_INCREMENT,
   street VARCHAR(60),
   street_number INT,
   flat INT,
@@ -27,8 +27,8 @@ CREATE TABLE customer (
   registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   id_referral INT,
   id_address INT,
-  FOREIGN KEY (id_referral) REFERENCES customer (id_customer),
-  FOREIGN KEY (id_address) REFERENCES address (id_address));
+  FOREIGN KEY (id_referral) REFERENCES customer(id_customer),
+  FOREIGN KEY (id_address) REFERENCES address(id_address));
 
 -- -----------------------------------------------------
 -- Table Employees
@@ -74,7 +74,8 @@ CREATE TABLE sale (
   id_employee INT,
   id_customer INT,
   id_glasses INT,
-  registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  registration_date DATE,
   FOREIGN KEY (id_employee) REFERENCES employee (id_employee),
-  FOREIGN KEY (id_customer) REFERENCES customer (id_client),
+  FOREIGN KEY (id_customer) REFERENCES customer (id_customer),
   FOREIGN KEY (id_glasses) REFERENCES glasses (id_glasses));
+

@@ -3,12 +3,9 @@ package Sprint1.Tasca1.Nivel1.Ejercicio2;
 public class Cotxe {
 
     private static final String Brand = "bmw";
-
     private static String model = "320";
-
     private final int Power;
-    public Cotxe(String model,int power){
-        this.model = model;
+    public Cotxe(int power){
         this.Power = power;
     }
     static void stop() {

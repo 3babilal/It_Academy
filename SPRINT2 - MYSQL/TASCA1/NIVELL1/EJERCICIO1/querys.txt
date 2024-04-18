@@ -4,13 +4,18 @@ FROM customer JOIN sale ON customer.id_customer = sale.id_customer
 WHERE customer.mail ='ana.perez@email.com'
 AND sale.registration_date BETWEEN '2024-01-01' AND '2024-06-01';
 
-SELECT brand FROM sale
+SELECT DISTINCT glasses.*
+FROM sale 
 JOIN glasses ON sale.id_glasses = glasses.id_glasses
-WHERE employee.id_employee ='2'
-GROUP BY brand
-ORDER BY COUNT(*) DESC;
+WHERE id_employee =1
+AND sale.registration_date BETWEEN '2024-01-01' AND '2025-01-01';
 
-SELECT DISTINCT supplier
+SELECT DISTINCT supplier.*
 FROM sale
 JOIN glasses ON sale.id_glasses = glasses.id_glasses
 JOIN supplier ON supplier.id_supplier = supplier.id_supplier;
+
+
+
+
+

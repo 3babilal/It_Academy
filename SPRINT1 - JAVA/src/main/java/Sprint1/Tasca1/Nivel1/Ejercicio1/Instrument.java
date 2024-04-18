@@ -7,7 +7,6 @@ abstract class Instrument {
     static String location = "dentro";
 
     public Instrument(String name, int price) {
-        super();
         this.name = name;
         this.price = price;
         System.out.println("Dentro del Constructor clase Instrument");
