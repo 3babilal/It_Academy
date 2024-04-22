@@ -7,3 +7,29 @@ comentarios eliminados
 variable estatica inicializada en la declaracion
 
 
+TASCA 2
+NIVEL 1
+Eliminado metodo getMessage inecessario de la clase VendaBuidaException
+Corregidos errores de lanzmaiento de excepcion.
+ArrayIndexOutOfBoundsException lanzado desde main accediendo a una posicion inexistente.
+
+TASCA 3
+NIVEL 1
+Ex 3:
+Solucionado catch sin nada en el cuerpo.
+Eliminado el e.printStackTrace().
+
+TASCA 5
+
+TASCA 8
+NIVEL 1
+EX 1:
+Si, no es necessario crear char0, modificado correctamente.
+EX 3:
+No hace falta metodo referencia.
+
+NIVEL 2
+EX 3:
+Añadido @Funcional Interface
+EX 4:
+Estructurados los casos dentro de metodos especificos.
