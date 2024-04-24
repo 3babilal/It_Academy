@@ -42,10 +42,8 @@ public class Menu {
                 }
             }
 
-        } catch (FileNotFoundException e) {
-            System.out.println("Error" + e);
         } catch (IOException e) {
-            System.out.println("Error "+ e);
+            System.out.println("Error" + e);
         }
         try {
             FileWriter f = new FileWriter(System.getProperty("user.dir")+"/classificacio.txt",true);
