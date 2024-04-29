@@ -12,18 +12,20 @@ CREATE TABLE city(
 	 id_province INT,
 	 FOREIGN KEY (id_province) REFERENCES province(id_province)
 );
- 
+CREATE TABLE address(
+	id_address INT PRIMARY KEY AUTO_INCREMENT,
+	address_name VARCHAR(15),
+    zip_code VARCHAR(15),
+	id_city INT,
+	id_province INT,
+	FOREIGN KEY (id_city) REFERENCES city(id_city)
+);
 CREATE TABLE customer(
 	id_customer INT PRIMARY KEY AUTO_INCREMENT,
 	customer_name VARCHAR(60),
 	last_name VARCHAR(60),
-	address VARCHAR(60),
-	zip_code VARCHAR(15),
-	id_city INT,
-	id_province INT,
-	phone_number INT (11),
-	FOREIGN KEY (id_city) REFERENCES city(id_city),
-	FOREIGN KEY (id_province) REFERENCES province(id_province)
+	id_address INT,
+	FOREIGN KEY (id_address) REFERENCES address(id_address)
 );
  
  CREATE TABLE pizza_category(
@@ -42,12 +44,8 @@ CREATE TABLE customer(
  
  CREATE TABLE store(
 	 id_store INT PRIMARY KEY AUTO_INCREMENT,
-	 address VARCHAR(60),
-	 zip_code VARCHAR(15),
-	 id_city INT,
-	 id_province INT,
-	 FOREIGN KEY (id_province) REFERENCES province(id_province),
-	 FOREIGN KEY (id_city) REFERENCES city(id_city)
+	 id_address INT,
+	FOREIGN KEY (id_address) REFERENCES address(id_address)
  );
  
    CREATE TABLE employee(
