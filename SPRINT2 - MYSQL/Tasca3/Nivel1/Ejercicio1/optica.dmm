@@ -22,7 +22,7 @@
 					"pattern": false,
 					"estimatedSize": "",
 					"any": "",
-					"fk": true
+					"fk": false
 				},
 				{
 					"id": "53c67a7e-c27c-4cae-914c-0c39e9de9911",
@@ -137,21 +137,14 @@
 					"any": ""
 				}
 			],
-			"relations": [
-				"b76d1fb5-cfe9-4027-afc4-ead2a76a8f6b"
-			],
+			"relations": [],
 			"lines": [],
 			"keys": [
 				{
 					"id": "3ef14087-c232-426b-82c4-00a14b31504a",
 					"name": "Primary",
 					"isPk": true,
-					"cols": [
-						{
-							"id": "cc6cf75f-9146-4052-abe7-7c0c37cf144f",
-							"colid": "0a1fa1b6-134e-4f75-98fa-e76b7e9b24ea"
-						}
-					]
+					"cols": []
 				},
 				{
 					"id": "4347e3a1-de07-4769-aaae-d5f81838a26a",
@@ -661,35 +654,7 @@
 			"capped": false
 		}
 	},
-	"relations": {
-		"b76d1fb5-cfe9-4027-afc4-ead2a76a8f6b": {
-			"id": "b76d1fb5-cfe9-4027-afc4-ead2a76a8f6b",
-			"visible": true,
-			"name": "referral__id",
-			"desc": "",
-			"type": "identifying",
-			"parent_key": "4347e3a1-de07-4769-aaae-d5f81838a26a",
-			"parent": "8be9cb02-6f91-48c9-a516-b0b6bf6bf0a7",
-			"child": "8be9cb02-6f91-48c9-a516-b0b6bf6bf0a7",
-			"c_mp": "true",
-			"c_mch": "true",
-			"c_p": "one",
-			"c_ch": "many",
-			"c_cp": "",
-			"c_cch": "",
-			"cols": [
-				{
-					"id": "1a1f72e5-e479-4107-8f6a-2b6d3be425b5",
-					"parentcol": "1a50ef7a-df05-4fdb-8d9c-e0662d68a640",
-					"childcol": "0a1fa1b6-134e-4f75-98fa-e76b7e9b24ea"
-				}
-			],
-			"generate": true,
-			"generateCustomCode": true,
-			"customCode": "",
-			"relationColor": "transparent"
-		}
-	},
+	"relations": {},
 	"notes": {},
 	"lines": {},
 	"model": {
@@ -726,7 +691,7 @@
 		"def_collation": "",
 		"def_others": "",
 		"connectionVersion": "",
-		"lastSaved": 1713875786933
+		"lastSaved": 1713939503181
 	},
 	"otherObjects": {},
 	"diagrams": {
@@ -744,8 +709,8 @@
 			"diagramItems": {
 				"8be9cb02-6f91-48c9-a516-b0b6bf6bf0a7": {
 					"referencedItemId": "8be9cb02-6f91-48c9-a516-b0b6bf6bf0a7",
-					"x": 45,
-					"y": 47,
+					"x": 100,
+					"y": 90,
 					"gHeight": 513,
 					"gWidth": 214,
 					"color": "#ffffff",
@@ -753,7 +718,9 @@
 					"resized": false,
 					"autoExpand": true,
 					"backgroundOpacity": "10",
-					"collapsed": false
+					"collapsed": false,
+					"gWidthRootEnvelop": 925,
+					"gHeightRootEnvelop": 513
 				},
 				"2b0f749e-6336-4791-b9ba-fa5da1d324fd": {
 					"referencedItemId": "2b0f749e-6336-4791-b9ba-fa5da1d324fd",
