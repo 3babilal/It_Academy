@@ -24,7 +24,7 @@ db.getCollection('restaurants').find({$and:[{cuisine:{$not:/American/}},{"grades
 //12 Escriu una consulta per trobar els restaurants que no preparen cap cuisine de 'American' i van aconseguir un marcador més de 70 i localitzat en la longitud menys que -65.754168. Nota: Fes aquesta consulta sense utilitzar $and operador.
 db.getCollection('restaurants').find({cuisine:{$not:/American/},"grades.score":{$gt:70}, "address.coord.0":{$lt:-65.754168}});
 //13 Escriu una consulta per trobar els restaurants que no preparen cap cuisine de 'American' i van obtenir un punt de grau 'A' no pertany a Brooklyn. S'ha de mostrar el document segons la cuisine en ordre descendent.
-db.getCollection('restaurants').find({$and:[{cuisine:{$not:/American/}},{"grades.grade":"A"},{borough:{$not:/Brooklyn/}}]}).sort({"cuisine":1});
+db.getCollection('restaurants').find({$and:[{cuisine:{$not:/American/}},{"grades.grade":"A"},{borough:{$not:/Brooklyn/}}]}).sort({"cuisine":-1});
 //14 Escriu una consulta per trobar el restaurant_id, name, borough i cuisine per a aquells restaurants que contenen 'Wil' com les tres primeres lletres en el seu nom.
 db.getCollection('restaurants').find({name:{$regex:/^wil/i}},{restaurant_id:1,name:1,borough:1,cuisine:1,_id:0});
 //15 Escriu una consulta per trobar el restaurant_id, name, borough i cuisine per a aquells restaurants que contenen 'ces' com les últimes tres lletres en el seu nom.
@@ -42,7 +42,7 @@ db.restaurants.find({"grades.score":{$lte:10}},{restaurant_id:1,name:1,borough:1
 //21 Escriu una consulta per trobar el restaurant_id, name, borough i cuisine per a aquells restaurants que preparen peix excepte 'American' i 'Chinees' o el name del restaurant comença amb lletres 'Wil'.
 db.restaurants.find({$or:[{cuisine:{$nin:['American','Chinese']},name:/^Wil/i},{cuisine:"Seafood"}]},{restaurant_id:1,name:1,borough:1,cuisine:1,_id:0})
 //22 Escriu una consulta per trobar el restaurant_id, name, i grades per a aquells restaurants que aconsegueixin un grau "A" i un score 11 en dades d'estudi ISODate "2014-08-11T00:00:00Z".
-db.restaurants.find({"grades.grade":"A","grades.score":11,"grades.date":ISODate("2014-08-11T00:00:00Z")},{restaurant_id:1,name:1,grades:1,_id:0})
+db.restaurants.find({grades:{$elemMatch:{"grade":"A","score":11,"date":ISODate("2014-08-11T00:00:00Z")}}},{restaurant_id:1,name:1,grades:1,_id:0})
 //23 Escriu una consulta per trobar el restaurant_id, name i grades per a aquells restaurants on el 2n element de varietat de graus conté un grau de "A" i marcador 9 sobre un ISODate "2014-08-11T00:00:00Z".
 db.restaurants.find({"grades.1.grade":"A","grades.1.score":9,"grades.1.date":ISODate("2014-08-11T00:00:00Z")},{restaurant_id:1,name:1,grades:1,_id:0})
 //24 Escriu una consulta per trobar el restaurant_id, name, adreça i ubicació geogràfica per a aquells restaurants on el segon element del array coord conté un valor que és més de 42 i fins a 52.
