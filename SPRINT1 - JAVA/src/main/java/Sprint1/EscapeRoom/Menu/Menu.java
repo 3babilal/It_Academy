@@ -91,17 +91,13 @@ public class Menu {
             if(pistas.isEmpty()){
                 throw new EmptyListException("NO SE HAN CREADO PISTAS PREVIAMENTE ");
             }
-            for (int i = 0; i< pistas.size(); i++){
-                System.out.println(pistas.get(i));
-            }
+            pistas.forEach(System.out::println);
         }
         public static void searchDecoration() throws EmptyListException {
             if(decorations.isEmpty()){
                 throw new EmptyListException("NO SE HAN CREADO DECORACIONES PREVIAMENTE");
             }
-            for (int i = 0; i< decorations.size(); i++){
-                System.out.println(decorations.get(i));
-            }
+            decorations.forEach(System.out::println);
         }
 
         public static Pistas showPista() throws EmptyListException{
@@ -151,7 +147,7 @@ public class Menu {
         String theme = sc.nextLine();
         sc.nextLine();
 
-        
+
     }
 
     }
